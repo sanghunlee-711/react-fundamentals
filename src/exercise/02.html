@@ -25,6 +25,7 @@
     // 💰 The example in the markdown file should be a good hint for you.
     const rootElement = document.getElementById('root')
     const makeElement = React.createElement
+
     const $element = makeElement('div', {
       children: [
         makeElement('span', { children: 'HEllo' }),
@@ -32,6 +33,14 @@
       ],
       className: 'container'
     })
+
+    //아래도 가능
+    // const $element = makeElement('div', {
+    //   className: 'container'
+    // }, [
+    //   makeElement('span', null, 'HEllo'),
+    //   makeElement('span', null, 'World')
+    // ])
 
 
     ReactDOM.createRoot(rootElement).render($element)
